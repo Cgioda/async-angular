@@ -1,0 +1,23 @@
+<h2>Ingresar estudiante</h2>
+
+<form [formGroup]="formularioRegistro" (ngSubmit)="agregarAlumno()">
+<div>
+    
+        <label for=" " class="obligatorio"> Nombre:</label>
+      <input type="text" formControlName="nombre">
+      
+      <br>
+        <label for=" "> Edad </label>
+            <input type="number" formControlName="edad">
+            <br>
+        <label for=" "> Correo </label>
+        <input type="email" formControlName="correo">
+        <br>
+    <label for=" " class="obligatorio">Contrasena</label>
+    <input type="text" formControlName="contrasena">
+    <p *ngIf="!formularioRegistro.get('contrasena')?.errors?.['required']">Campo obligatorio, minimo 8 caracteres</p>
+    <hr>
+    <button type="submit">Ingresar!</button>
+</div>
+    
+</form>
