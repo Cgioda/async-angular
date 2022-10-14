@@ -23,6 +23,11 @@ export class FormularioReactivoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+inhabilitadoAlerta()
+{alert("Por el momento no esta permitido agregar usuarios")}
+
+
   agregarAlumno(){
   }
 }

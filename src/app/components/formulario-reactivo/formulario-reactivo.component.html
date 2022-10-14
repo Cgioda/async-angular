@@ -17,7 +17,7 @@
     <input type="text" formControlName="contrasena">
     <p *ngIf="!formularioRegistro.get('contrasena')?.errors?.['required']">Campo obligatorio, minimo 8 caracteres</p>
     <hr>
-    <button type="submit">Ingresar!</button>
+    <button mat-button color="primary" (click)="inhabilitadoAlerta()" type="submit">Ingresar!</button>
 </div>
     
 </form>
