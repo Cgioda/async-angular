@@ -1,7 +1,7 @@
 <h1>Lista de estudiantes</h1>
-<ol>
+<ul>
    <li *ngFor="let persona of listaNombres">
-    <div *ngIf="persona.edad > 18"> {{persona.nombre }} - {{persona.edad}}</div>
-    <div *ngIf="persona.edad < 18" class="menor"> {{persona.nombre}} - {{persona.edad}}</div>
+      <div *ngIf="persona.edad > 18 && persona.activo"> {{persona.nombre }} - {{persona.edad}} <button (click)="eliminarPersona(persona)">Borrame</button></div>
+      <div *ngIf="persona.edad < 18 && persona.activo" class="menor"> {{persona.nombre}} - {{persona.edad}} <button (click)="eliminarPersona(persona)">Borrame</button></div>
    </li>
-</ol>
+</ul>

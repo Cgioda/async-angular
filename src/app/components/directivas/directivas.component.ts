@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Persona } from 'src/app/models/persona';
 
 
@@ -7,17 +7,19 @@ import { Persona } from 'src/app/models/persona';
   templateUrl: './directivas.component.html',
   styleUrls: ['./directivas.component.css']
 })
-export class DirectivasComponent implements OnInit {
-  listaNombres: Array<Persona> = [
-    {nombre: 'Pablo', edad: 32},
-    {nombre: 'Ariel', edad: 5},
-    {nombre: 'Manolo', edad: 30},
-    {nombre: 'Manuela', edad: 11},
-    {nombre: 'Carlos', edad: 16},
-  ];
+export class DirectivasComponent implements OnInit { 
+  @Input() listaNombres: Array <any> ;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+eliminarPersona(persona:Persona){
+  persona.activo = false 
 }
+
+
+}
+
+
